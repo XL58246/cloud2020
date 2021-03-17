@@ -1,0 +1,42 @@
+server:
+  port: 9101
+
+spring:
+  application:
+    name: cloudalibaba-payment-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://localhost/mytable?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
+    username: xinle
+    password: jk1234
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+        datasource:
+          ds1:
+            nacos:
+              server-addr: localhost:8848
+              dataId: ${spring.application.name}
+              groupId: DEFAULT_GROUP
+              data_type: json
+              rule-type: flow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#Mybatis配置
+mybatis:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.xinle.springcloud.entities
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名
+    cache-enabled: true #开启二级缓存

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-stream-rabbitmq-consummer8803" />
+        <module name="cloudalibaba-provider-payment9102" />
+        <module name="cloudalibaba-provider-payment9101" />
+        <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-config-client3366" />
+        <module name="cloud-config-center3344" />
+        <module name="cloud-eureka-server7002" />
+        <module name="cloud-eureka-server7001" />
+        <module name="cloud-api-commons" />
+        <module name="cloudalibaba-nacos-config-client3377" />
+        <module name="cloud-provider-payment8004" />
+        <module name="cloud-provider-payment8002" />
+        <module name="cloud-provider-payment8001" />
+        <module name="cloud-consummer-order-openfeign-80" />
+        <module name="cloudalibaba-consummer-nacos-order83" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
+        <module name="Test" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="cloud-consummer-order80" />
+        <module name="cloud-stream-rabbitmq-consummer8802" />
+        <module name="cloud-consummer-order-openfeign-hystrix-80" />
+        <module name="cloud-config-client3355" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloudalibaba-provider-payment9001" target="1.8" />
+      <module name="purchase" target="1.7" />
+      <module name="Test" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="purchase" options="" />
+    </option>
+  </component>
+</project>
